@@ -1,0 +1,14 @@
+AndroidManifest.xml:
+<uses-permission android:name="android.permission.INTERNET"/>
+(Adding MainActivity After)
+<meta-data
+	android:name="com.google.android.gms.ads.APPLICATION_ID"
+	android:value="ca-app-pub-6113880253435669~1483501663"/>
+
+MainActivity.java:
+AdView adView; (onCreate Before)
+
+(super.onCreate(savedInstanceState) After):
+adView=findViewById(R.id.adView);
+AdRequest adRequest = new AdRequest.Builder().build();
+adView.loadAd(adRequest);
